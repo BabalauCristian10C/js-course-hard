@@ -16,10 +16,10 @@ if (lang === 'ru'){
 
 switch (lang) {
     case "ru":
-        console.log(ruD);
+        console.log(ruCallendar);
         break;
     case "en": 
-        console.log(enD);
+        console.log(enCallendar);
         break;
 }
 
