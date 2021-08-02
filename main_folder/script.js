@@ -1,14 +1,16 @@
 let lang = prompt("Select ru / en", "ru");
-const ruD = ["понедельник", "вторник","среда","четверг","пятница","суббота", "восскресенье"];
-const enD = ["monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" , "sunday"];
-const comD = [[ruD], [enD]];
+const ruCallendar = ["понедельник", "вторник","среда","четверг","пятница","суббота", "восскресенье"];
+const enCallendar = ["monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" , "sunday"];
+const comCallendar = {"ru": [ruCallendar],
+                      "en": [enCallendar]};
+
 let ans;
 
 // Method if
 if (lang === 'ru'){
-    console.log(ruD);
+    console.log(ruCallendar);
 } else if (lang === 'en') {
-    console.log(enD);
+    console.log(enCallendar);
 }
 // Method Switch-case
 
@@ -22,8 +24,10 @@ switch (lang) {
 }
 
 // Method Multidimensional Array
+if (!!(lang)){
+    console.log(comCallendar[lang]);
+}
 
-lang === "ru" ? console.log(comD[0]) : console.log(comD[1]);
 
 // 2nd Excersise
 
