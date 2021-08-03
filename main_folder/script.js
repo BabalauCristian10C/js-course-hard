@@ -1,36 +1,32 @@
-let lang = prompt("Select ru / en", "ru");
-const ruCallendar = ["понедельник", "вторник","среда","четверг","пятница","суббота", "восскресенье"];
-const enCallendar = ["monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" , "sunday"];
-const comCallendar = {"ru": [ruCallendar],
-                      "en": [enCallendar]};
+'use strict';
 
-let ans;
+let argument = "123456789112939321932832189821838213871238231893128913813298918891382138128218",
+    argumentLenght = lenghtArgument(argument);
 
-// Method if
-if (lang === 'ru'){
-    console.log(ruCallendar);
-} else if (lang === 'en') {
-    console.log(enCallendar);
-}
-// Method Switch-case
 
-switch (lang) {
-    case "ru":
-        console.log(ruCallendar);
-        break;
-    case "en": 
-        console.log(enCallendar);
-        break;
-}
-
-// Method Multidimensional Array
-if (!!(lang)){
-    console.log(comCallendar[lang]);
+function lenghtArgument (argument) {
+    let index = 0;
+    for (let i = 0; i< 100; i++){
+        if (typeof argument[i] !== "undefined"){
+            index++;
+        }
+        else {
+            break;
+        }
+    }
+    return index;
 }
 
 
-// 2nd Excersise
-
-const namePerson = prompt("имя", 'Артем');
-namePerson === 'Артем' ? ans = "директор" : namePerson === "Максим" ? ans = "преподаватель" : ans = "студент";
-console.log(ans);
+const argumentControl = function(argument, argumentLenght) {
+    if (typeof argument !== "string"){
+        return "Argument is not a string";
+    } else {
+        argument = argument.trim();
+        if (argumentLenght > 30) {
+            argument = argument.substr(0, 31) + "...";
+        }
+        return argument;
+    }
+};
+console.log(argumentControl(argument, argumentLenght));
