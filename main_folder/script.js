@@ -1,36 +1,23 @@
-let lang = prompt("Select ru / en", "ru");
-const ruCallendar = ["понедельник", "вторник","среда","четверг","пятница","суббота", "восскресенье"];
-const enCallendar = ["monday", "tuesday", "wednesday", "thrusday", "friday", "saturday" , "sunday"];
-const comCallendar = {"ru": [ruCallendar],
-                      "en": [enCallendar]};
+const arr = ["23412", "45124", '98321231', "2931", "65", "981823", "444"];
 
-let ans;
-
-// Method if
-if (lang === 'ru'){
-    console.log(ruCallendar);
-} else if (lang === 'en') {
-    console.log(enCallendar);
-}
-// Method Switch-case
-
-switch (lang) {
-    case "ru":
-        console.log(ruD);
-        break;
-    case "en": 
-        console.log(enD);
-        break;
+for (let number in arr){
+    if (arr[number][0] === "2" || arr[number][0] === "4") {
+        console.log(arr[number]);
+    }
 }
 
-// Method Multidimensional Array
-if (!!(lang)){
-    console.log(comCallendar[lang]);
+// 2.
+
+for (let i = 2; i < 101; i++) {
+    let x = 1;
+    for (let b = 1; b < i; b++){
+        if (i%b === 0) {
+            x++;
+        } else {
+            continue;
+        }
+    }
+    if (x === 2){
+        console.log(i);
+    }
 }
-
-
-// 2nd Excersise
-
-const namePerson = prompt("имя", 'Артем');
-namePerson === 'Артем' ? ans = "директор" : namePerson === "Максим" ? ans = "преподаватель" : ans = "студент";
-console.log(ans);
