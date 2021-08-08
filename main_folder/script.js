@@ -7,7 +7,8 @@ const styleCommon = styleBold + styleCursive;
 let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     date = new Date(),
     todayDate = date.getDay();
-todayDate = 5
+
+
 weekDays.forEach(function(item, i, array){
     if (i === 0 || i === 6) {
         if (todayDate === i){
@@ -15,7 +16,6 @@ weekDays.forEach(function(item, i, array){
         } else {
             console.log(`%c ${item}`, styleCursive);
         }
-
     }else if (todayDate === i){
         console.log(`%c ${item}`, styleBold);
     }
