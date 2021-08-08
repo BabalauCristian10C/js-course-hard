@@ -1,23 +1,25 @@
-const arr = ["23412", "45124", '98321231', "2931", "65", "981823", "444"];
+'use strict';
 
-for (let number in arr){
-    if (arr[number][0] === "2" || arr[number][0] === "4") {
-        console.log(arr[number]);
-    }
-}
+const styleBold = 'font-weight:bold; ';
+const styleCursive = 'font-style: italic;';
+const styleCommon = styleBold + styleCursive;
 
-// 2.
-
-for (let i = 2; i < 101; i++) {
-    let x = 1;
-    for (let b = 1; b < i; b++){
-        if (i%b === 0) {
-            x++;
+let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    date = new Date(),
+    todayDate = date.getDay();
+todayDate = 5
+weekDays.forEach(function(item, i, array){
+    if (i === 0 || i === 6) {
+        if (todayDate === i){
+            console.log(`%c ${item}`, styleCommon);
         } else {
-            continue;
+            console.log(`%c ${item}`, styleCursive);
         }
+
+    }else if (todayDate === i){
+        console.log(`%c ${item}`, styleBold);
     }
-    if (x === 2){
-        console.log(i + " Делители этого числа: 1 и " + i);
+    else{
+        console.log(item);
     }
-}
+});
