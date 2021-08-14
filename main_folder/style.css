@@ -1,13 +1,26 @@
-.current-date {
-    background-color: antiquewhite;
-    margin: 0 auto;
-    text-align: center;
-    max-width:300px;
-    position:relative;
-    top: 350px;
+.color-box {
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: gray 1px solid;
-    margin-bottom:20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 230px;
+    height: 100px;
+    flex-direction: column;
+    background-color: beige;
+}
+section{
+    display:flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    border:0px;
+    transition: 1s;
+}
+button:hover{
+    
+    transform: scale(1.2);
+}
+span {
+    font-size: 2em;
 }
